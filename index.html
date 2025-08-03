@@ -3,81 +3,43 @@
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
-    <title>کارت دارم!</title>
+    <title>سوپرایزت دارم!</title>
     <style>
         body {
+            background-color: #fff8f0;
             font-family: Tahoma, sans-serif;
-            background-color: #fff8e1;
-            color: #3e2723;
             direction: rtl;
-            padding: 40px;
-            line-height: 1.9;
+            padding: 30px;
+            color: #333;
         }
         .box {
             background-color: #fff;
-            padding: 25px;
+            border: 2px dashed #ff7f50;
+            padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-            max-width: 600px;
-            margin: auto;
+            max-width: 500px;
+            margin: 0 auto;
         }
-        input, button {
-            font-family: Tahoma;
-            padding: 8px 12px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            margin: 10px 0;
+        h1 {
+            color: #ff4500;
+            text-align: center;
         }
-        #message {
-            display: none;
-            margin-top: 20px;
-            white-space: pre-wrap;
+        p {
+            line-height: 1.8;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
     <div class="box">
-        <h2>سلام! اول بگو اسمت چیه و چند سالته؟</h2>
-        <input type="text" id="name" placeholder="اسم">
-        <input type="number" id="age" placeholder="سن">
-        <button onclick="showMessage()">بزن بریم!</button>
-        <div id="message"></div>
+        <h1>سلام چطوری؟ 😏</h1>
+        <p>می‌دونم اسمت شاهرخه و می‌دونم ۲۵ سالته. آره خب، زرنگم!</p>
+        <p>ولی راستش اینا برام هیچ اهمیتی نداره! تنها چیزی که واسم مهمه اینه که بیای یه سر به پیجمون بزنی، ببینی چطوری می‌تونی یه دل رو خوشحال کنی یا یه نفر رو سوپرایز کنی بدون اینکه کلی خرج کنی 😌</p>
+        <p>قول نمی‌دم دنیا عوض شه ولی خب شاید یه لبخند بزنه رو لبت، شاید یه ایده خفن بگیری، شاید... هرچی!</p>
+        <p>حالا اگه نیای؟ نمیگم بری زیر تریلی حالا ولی فقط از خدا می‌خوام یه روز گوشیتو جا بذاری خونه و تمام نوتیف‌ها همون روز بیان 😒</p>
+        <p>نه که ناراحت شم نه، فقط خب... حس می‌کنم یه ذره بی‌معرفتی کردی.</p>
+        <p>باور کن لینک پیج رو همین‌جا برات گذاشتم. نخواستی؟ باشه، ولی بدون دلم شکست 😔</p>
+        <p style="text-align:center;"><a href="https://www.instagram.com/suprise.shk" target="_blank">📎 لینک پیج ما</a></p>
     </div>
-
-    <script>
-        function showMessage() {
-            const name = document.getElementById('name').value || "رفیق";
-            const age = document.getElementById('age').value || "نمی‌دونم چند";
-            const msg = `سلام چطوری؟ 😏
-
-می‌دونم اسمت ${name}ـه و ${age} سالته.
-آره خب، زرنگم!
-
-ولی راستش اینا برام هیچ اهمیتی نداره!
-تنها چیزی که واسم مهمه اینه که بیای یه سر به پیجمون بزنی، 
-ببینی چطوری می‌تونی یه دل رو خوشحال کنی،
-یا یه نفر رو سوپرایز کنی بدون اینکه کلی خرج کنی 😌
-
-قول نمی‌دم دنیا عوض شه،
-ولی شاید یه لبخند رو لبت بیاد، شاید یه ایده خفن بگیری، شاید... هرچی!
-
-حالا اگه نیای؟
-نمی‌گم بری زیر تریلی، ولی فقط از خدا می‌خوام یه روز گوشیتو جا بذاری خونه و تمام نوتیف‌ها همون روز بیان 😒
-
-نه که ناراحت شم نه، فقط خب...
-یه ذره بی‌معرفتیه!
-
-باور کن لینک پیج رو همین‌جا برات گذاشتم.
-نخواستی؟ باشه... ولی بدون دلم شکست 😔
-
-📎 لینک پیج ما:
-https://www.instagram.com/suprise.shk?igsh=a2Zreno2bDdsNHpv
-
-کارت دارم 😎`;
-
-            document.getElementById('message').style.display = 'block';
-            document.getElementById('message').innerText = msg;
-        }
-    </script>
 </body>
 </html>
