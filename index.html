@@ -28,12 +28,30 @@
             line-height: 1.8;
             font-size: 16px;
         }
+        .hidden {
+            display: none;
+        }
+        input, button {
+            font-size: 16px;
+            padding: 6px;
+            margin-top: 10px;
+            width: 90%;
+        }
     </style>
 </head>
 <body>
-    <div class="box">
+    <div class="box" id="formBox">
+        <h1>یه سوال کوچولو 😏</h1>
+        <p>اسمت چیه؟</p>
+        <input type="text" id="nameInput" placeholder="مثلاً شاهرخ">
+        <p>چند سالته؟</p>
+        <input type="number" id="ageInput" placeholder="مثلاً ۲۵">
+        <button onclick="showMessage()">بزن بریم!</button>
+    </div>
+
+    <div class="box hidden" id="messageBox">
         <h1>سلام چطوری؟ 😏</h1>
-        <p>می‌دونم اسمت شاهرخه و می‌دونم ۲۵ سالته. آره خب، زرنگم!</p>
+        <p id="intro"></p>
         <p>ولی راستش اینا برام هیچ اهمیتی نداره! تنها چیزی که واسم مهمه اینه که بیای یه سر به پیجمون بزنی، ببینی چطوری می‌تونی یه دل رو خوشحال کنی یا یه نفر رو سوپرایز کنی بدون اینکه کلی خرج کنی 😌</p>
         <p>قول نمی‌دم دنیا عوض شه ولی خب شاید یه لبخند بزنه رو لبت، شاید یه ایده خفن بگیری، شاید... هرچی!</p>
         <p>حالا اگه نیای؟ نمیگم بری زیر تریلی حالا ولی فقط از خدا می‌خوام یه روز گوشیتو جا بذاری خونه و تمام نوتیف‌ها همون روز بیان 😒</p>
@@ -41,5 +59,19 @@
         <p>باور کن لینک پیج رو همین‌جا برات گذاشتم. نخواستی؟ باشه، ولی بدون دلم شکست 😔</p>
         <p style="text-align:center;"><a href="https://www.instagram.com/suprise.shk" target="_blank">📎 لینک پیج ما</a></p>
     </div>
+
+    <script>
+        function showMessage() {
+            const name = document.getElementById('nameInput').value.trim();
+            const age = document.getElementById('ageInput').value.trim();
+            if (name === "" || age === "") {
+                alert("لطفاً اسمت و سنت رو وارد کن 😅");
+                return;
+            }
+            document.getElementById('formBox').classList.add('hidden');
+            document.getElementById('messageBox').classList.remove('hidden');
+            document.getElementById('intro').innerText = `می‌دونم اسمت ${name}ـه و می‌دونم ${age} سالته. آره خب، زرنگم!`;
+        }
+    </script>
 </body>
 </html>
