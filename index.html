@@ -45,7 +45,7 @@
         <p>اسمت چیه؟</p>
         <input type="text" id="nameInput" placeholder="مثلاً شاهرخ">
         <p>چند سالته؟</p>
-        <input type="number" id="ageInput" placeholder="مثلاً ۲۵">
+        <input type="text" id="ageInput" placeholder="مثلاً ۲۵ یا 25">
         <button onclick="showMessage()">بزن بریم!</button>
     </div>
 
@@ -56,13 +56,23 @@
     </div>
 
     <script>
+        function convertPersianDigits(str) {
+            const persianDigits = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+            return str.replace(/[۰-۹]/g, function(d) {
+                return persianDigits.indexOf(d).toString();
+            });
+        }
+
         function showMessage() {
             const name = document.getElementById('nameInput').value.trim();
-            const age = document.getElementById('ageInput').value.trim();
+            let age = document.getElementById('ageInput').value.trim();
+            age = convertPersianDigits(age);
+
             if (name === "" || age === "") {
                 alert("لطفاً اسمت و سنت رو وارد کن 😅");
                 return;
             }
+
             const message = `می‌دونم اسمت ${name}ـه و می‌دونم ${age} سالته. آره خب، زرنگم! ولی راستش اینا برام هیچ اهمیتی نداره! تنها چیزی که واسم مهمه اینه که بیای یه سر به پیجمون بزنی، ببینی چطوری می‌تونی یه دل رو خوشحال کنی یا یه نفر رو سوپرایز کنی بدون اینکه کلی خرج کنی 😌
 
 قول نمی‌دم دنیا عوض شه ولی خب شاید یه لبخند بزنه رو لبت، شاید یه ایده خفن بگیری، شاید... هرچی!
